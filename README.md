@@ -8,7 +8,7 @@ To execute Windows basic commands and batch scripting
 
 ### Step 1:
 
-Navigate to any Windows environment installed on the system or installed inside a virtual environment like virtual box/vmware.
+Navigate to any Windows environment installed on the system or installed inside a virtual environment like virtual box/vmware 
 
 ### Step 2:
 
@@ -20,82 +20,81 @@ Adapt paths as needed based on your system configuration.
 
 Execute the necessary commands/batch file for the desired output. 
 
+
+
+
 # WINDOWS COMMANDS:
 ## Exercise 1: Basic Directory and File Operations
 Create a directory named "MyLab" on the desktop.
-## COMMAND AND OUTPUT
-~~~
-mkdir %userprofile%\Desktop\MyLab
-~~~
-![alt text](<Screenshot 2025-05-15 152331.png>)
 
+
+## COMMAND AND OUTPUT
+```
+mkdir %userprofile%\Desktop\MyLab
+```
+![alt text](440112126-e56288bd-23f2-4b13-b26e-7bca67e92460.png)
 Change to the "MyLab" directory and create an empty text file named "MyFile.txt" inside it.
 
+
 ## COMMAND AND OUTPUT
-~~~
+```
 cd %userprofile%\Desktop\MyLab
-~~~
-![alt text](<Screenshot 2025-05-15 152341.png>)
-~~~
-type nul > MyFile.txt
-~~~
-![alt text](<Screenshot 2025-05-15 152351.png>)
+```
+![alt text](440112091-97e74eaa-82f9-4a86-93c9-b273debc4678.png)
+
+![alt text](440112101-0b13ccf5-e4fe-4091-8176-9f010a4968b7.png)
 
 List the contents of the "MyLab" directory.
 
 
 ## COMMAND AND OUTPUT
-~~~
+```
 dir %userprofile%\Desktop\MyLab
-~~~
-![alt text](<Screenshot 2025-05-15 152402.png>)
+```
+![alt text](440112076-ecb769d0-b271-42ac-8e44-7d7b45ec6a5e.png)
 
 Copy "MyFile.txt" to a new folder named "Backup" on the desktop.
 
 ## COMMAND AND OUTPUT
-~~~
+```
 mkdir %userprofile%\Desktop\Backup
-~~~
-![alt text](<Screenshot 2025-05-15 152429.png>)
-~~~
+
 copy MyFile.txt %userprofile%\Desktop\Backup
-~~~
-![alt text](<Screenshot 2025-05-15 152437.png>)
+```
+![alt text](440112053-82591216-5e9c-4fbf-bf5e-3f6bdfe4c820.png)
+
+![alt text](440112061-340dd815-4e46-411e-9203-291480c4dbed.png)
 
 Move the "MyLab" directory to the "Documents" folder.
 
+
 ## COMMAND AND OUTPUT
-~~~
-mkdir %userprofile%\Desktop\Documents
-move MyLab Documents
-~~~
-
-![alt text](<Screenshot 2025-05-15 152447.png>)
-
-
-
+```
+mv Myfile.txt %userprofile%\Documents
+```
+![alt text](440112019-6dea1099-0238-4ff0-8a65-78676c40790d.png)
 ## Exercise 2: Advanced Batch Scripting
 Create a batch script named "BackupScript.bat" that creates a backup of files with the ".docx" extension from the "Documents" folder to a new folder named "DocBackup" on the desktop.
-## COMMAND:
-~~~
+
+```
 @echo off
 mkdir %userprofile%\Desktop\DocBackup
 copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
 echo Backup completed successfully!
-~~~
-![alt text](<Screenshot 2025-05-15 152458.png>)
+```
+Modify the script to delete files with the ".docx" extension from the "Documents" folder after creating the backup.
 
-## COMMAND:
-~~~
+```
 @echo off
 mkdir %userprofile%\Desktop\DocBackup
 copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
 del %userprofile%\Documents\*.docx
 echo Backup and deletion completed successfully!
-~~~
+
+```
 ## OUTPUT
 
-![alt text](<Screenshot 2025-05-15 152510.png>)
+![alt text](440111995-399b363a-0fc5-4214-863b-35c2cb27308b.png)
 
 # RESULT:
 The commands/batch files are executed successfully.
